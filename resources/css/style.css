@@ -16,9 +16,14 @@ footer {
     padding: 20px;
     color: #fff;
 }
-footer div {
-    width: 48%;
+footer > div div {
+    width: 49%;
     display: inline-block;
+}
+footer p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 15px;
 }
 footer ul {
     margin: 0;
@@ -130,6 +135,7 @@ footer li a {
     align-items: center;
     background-image: url(images/background.png);
     background-size: cover;
+    background-position-y: center;
     background-repeat: no-repeat;
 }
 .hero:before {
@@ -358,7 +364,7 @@ footer li a {
 .contact h2 {
     color: #333;
 }
-.containerFooter {
+.containerContacts {
     font-size: 20px;
     color: #333;
 }
@@ -367,6 +373,12 @@ footer li a {
 }
 /*MEDIA QUERIES*/
 
+@media(min-width: 1900px) {
+    footer > div {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
 @media(max-width: 942px) {
     .contact {
         background-size: auto;
@@ -430,23 +442,31 @@ footer li a {
         font-size: 18px;
         padding: 0 10px;
     }
-    footer div {
+    footer > div div {
         text-align: center !important;
         width: 100%;
     }
-    footer ul {
-        display: grid;
-        text-align: center;
-        width: 100%;
-    }
-    footer li {
-        margin-top: 10px;
+    footer p {
+        margin-bottom: 15px;
+        margin-left: 0;
     }
     .projects > div {
         margin-top: 28px;
     }
     .linkTooltip {
         font-size: 18px;
+    }
+}
+@media(max-width: 505px) {
+    .contactItemBottom {
+        display: block;
+        margin-right: 0;
+    }
+    footer li {
+        font-size: 13px;
+    }
+    footer span {
+        display: block;
     }
 }
 @media(max-width: 350px) {
@@ -461,10 +481,6 @@ footer li a {
         background: linear-gradient(to bottom, #ffc2c4 0%, #ffe3d1 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     }
-    .contactItemBottom {
-        display: block;
-        margin-right: 0;
-    }
     .contactItemBottom p {
         margin-left: 0;
     }
@@ -472,5 +488,13 @@ footer li a {
         display: block;
         margin: 0 auto;
         margin-bottom: 9px;
+    }
+    footer ul {
+        display: grid;
+        text-align: center;
+        width: 100%;
+    }
+    footer li {
+        margin-top: 10px;
     }
 }
