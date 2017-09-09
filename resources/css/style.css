@@ -3,6 +3,7 @@ body {
     font-family: Roboto, sans-serif;
 }
 a {
+    color: inherit;
     text-decoration: none;
     outline: 0!important;
 }
@@ -266,6 +267,7 @@ footer li a {
 }
 .thumbnailInfo h3 {
     margin: 0;
+    display: inline-block;
 }
 .thumbnail ul {
     margin-top: 30px;
