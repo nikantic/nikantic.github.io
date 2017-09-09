@@ -155,11 +155,12 @@ footer li a {
 .hero h1 {
     margin: 0;
     font-size: 65px;
-    color: #fd990a!important;
+    color: #333!important;
 }
 .hero h2 {
     margin: 0;
     font-size: 50px;
+    color: #696969;
 }
 .logoHero {
     max-height: 200px;
@@ -496,5 +497,21 @@ footer li a {
     }
     footer li {
         margin-top: 10px;
+    }
+}
+@media(min-height: 950px) {
+    .logoHero {
+        max-height: 200px;
+    }
+    .hero h1 {
+        font-size: 65px;
+    }
+    .hero h2 {
+        font-size: 50px;
+    }
+    .contactItem img {
+        height: 60px;
+        margin: 20px;
+        padding: 20px;
     }
 }
