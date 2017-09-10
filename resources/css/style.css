@@ -75,6 +75,19 @@ footer li a {
     font-family: "Roboto Condensed", sans-serif;
     transition: 0.1s ease;
 }
+.logoNav {
+    height: 50px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navCollapse .logoNav {
+    visibility: visible;
+    height: 40px;
+    padding: 2px;
+    opacity: 0.7;
+}
 .navToggle {
     display: none;
     width: 51px;
