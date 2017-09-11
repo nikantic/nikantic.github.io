@@ -24,26 +24,54 @@ jQuery(document).ready(function($){
     };
 
     // function to determine tap outside of thumbnail
-    var tapOutside = function(event){
-        var isTapInside = $.contains($(".thumbnail"), event.target);
+    var tapOutsideThumbnail = function(event){
+        var isTapThumbnail = $.contains($(".thumbnail"), event.target);
 
-        if (!isTapInside) {
-            $('.thumbnail').find(".thumbnailLink").removeClass('thumbnailLinkHover');
-            $('.thumbnail').find(".thumbnailImage").removeClass('thumbnailImageHover');
-            $('.thumbnail').find(".thumbnailAnchor").removeClass('thumbnailLineHover');
-            document.removeEventListener("touchstart", tapOutside, true);
+        if (!isTapThumbnail) {
+            $(".thumbnail").find(".thumbnailLink").removeClass("thumbnailLinkHover");
+            $(".thumbnail").find(".thumbnailImage").removeClass("thumbnailImageHover");
+            $(".thumbnail").find(".thumbnailAnchor").removeClass("thumbnailLineHover");
+            document.removeEventListener("touchend", tapOutsideThumbnail, true);
         }
     };
 
     // handling thumbnail hover on touch devices
-    $('.thumbnail').on('touchstart', function(){ 
-        $('.thumbnail').not(this).find(".thumbnailLink").removeClass('thumbnailLinkHover');
-        $('.thumbnail').not(this).find(".thumbnailImage").removeClass('thumbnailImageHover');
-        $('.thumbnail').not(this).find(".thumbnailAnchor").removeClass('thumbnailLineHover');
-        $(this).find(".thumbnailLink").addClass('thumbnailLinkHover');
-        $(this).find(".thumbnailImage").addClass('thumbnailImageHover');
-        $(this).find(".thumbnailAnchor").addClass('thumbnailLineHover');
-        document.addEventListener("touchstart", tapOutside, true);
+    $(".thumbnail").on("touchend", function(){ 
+        $(".thumbnail").not(this).find(".thumbnailLink").removeClass("thumbnailLinkHover");
+        $(".thumbnail").not(this).find(".thumbnailImage").removeClass("thumbnailImageHover");
+        $(".thumbnail").not(this).find(".thumbnailAnchor").removeClass("thumbnailLineHover");
+        $(this).find(".thumbnailLink").addClass("thumbnailLinkHover");
+        $(this).find(".thumbnailImage").addClass("thumbnailImageHover");
+        $(this).find(".thumbnailAnchor").addClass("thumbnailLineHover");
+        document.addEventListener("touchend", tapOutsideThumbnail, true);
+    });
+
+    // function to determine tap outside of contact buttons
+    var tapOutsideContact = function(event){
+        var isTapContact = $.contains($(".contactItem"), event.target);
+
+        if (!isTapContact) {
+            $(".contactItem").find(".linkTooltip").removeClass("linkTooltipHover").addClass("linkTooltipNoHover");
+            $(".contactItem").find(".contactImage").removeClass("contactImageHover").addClass("contactImageNoHover");
+            document.removeEventListener("touchend", tapOutsideContact, false);
+        }
+    };
+
+    // handling contact buttons hover on touch devices
+    $(".contactItem").on("touchend", function(e){
+        if ($(this).find(".linkTooltip").hasClass("linkTooltipHover")) {
+            $(this).find(".linkTooltip").removeClass("linkTooltipHover").addClass("linkTooltipNoHover");
+            $(this).find(".contactImage").removeClass("contactImageHover").addClass("contactImageNoHover");
+        } else {
+            e.preventDefault();
+            e.stopPropagation();
+            document.addEventListener("touchend", tapOutsideContact, false);
+            $(this).find(".linkTooltip").removeClass("linkTooltipNoHover").addClass("linkTooltipHover");
+            $(this).find(".contactImage").removeClass("contactImageNoHover").addClass("contactImageHover");
+        }
+        // remove the hover classes on the rest of the buttons
+        $(".contactItem").not(this).find(".linkTooltip").removeClass("linkTooltipHover").addClass("linkTooltipNoHover");
+        $(".contactItem").not(this).find(".contactImage").removeClass("contactImageHover").addClass("contactImageNoHover");
     });
 
     // scroll to and animate function

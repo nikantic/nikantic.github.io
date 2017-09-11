@@ -181,6 +181,10 @@ footer li a {
 .contactItem {
     display: inline-block;
     position: relative;
+    user-select: none;
+}
+.contactItem > a {
+    display: block;
 }
 .contactItem img {
     height: 60px;
@@ -188,6 +192,7 @@ footer li a {
     display: inline-block;
     margin: 20px;
     border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0);
     text-align: center;
     position: relative;
     padding: 20px;
@@ -195,12 +200,21 @@ footer li a {
     background: #484848;
     transition: 0.3s ease;
 }
-.contactItem img:hover {
+.contactItem:hover img {
     background: #000;
+    border: 2px solid #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.contactItem img:hover + .linkTooltip {
-    opacity: 1;
-    visibility: visible;
+/*Hover classes for TOUCH devices*/
+.contactImageHover {
+    background: #000 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+}
+.contactImageNoHover {
+    background: #484848 !important;
+    border: 2px solid rgba(255, 255, 255, 0) !important;
+    box-shadow: none !important;
 }
 .linkTooltip {
     opacity: 0;
@@ -208,13 +222,26 @@ footer li a {
     position: absolute;
     border-radius: 20px 1px;
     color: #333;
-    background: white;
+    background: #fff;
     font-size: 25px;
     bottom: -31px;
     text-transform: none;
     font-family: "Roboto Condensed", sans-serif;
     width: 100%;
     transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.contactItem:hover .linkTooltip {
+    opacity: 1;
+    visibility: visible; 
+}
+/*Hover classes for TOUCH devices*/
+.linkTooltipHover {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.linkTooltipNoHover {
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 .heroTop {
     display: flex;
