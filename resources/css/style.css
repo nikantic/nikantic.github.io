@@ -5,7 +5,11 @@ body {
 a {
     color: inherit;
     text-decoration: none;
-    outline: 0!important;
+    outline: 0 !important;
+    transition: 0.3s ease;
+}
+a:hover {
+    color: #cc6060;
 }
 ul {
     padding: 0;
@@ -55,6 +59,21 @@ footer li a {
     display: inline-grid;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
 }
+.nav:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 6;
+    right: 0;
+    top: 0;
+    height: 3px;
+    width: 100%;
+}
+.navCollapse:before {
+    width: 0% !important;
+    background: #cba4ca !important;
+    transition: .3s ease !important;
+}
 .navCollapse li a {
     color: #212121 !important;
 }
@@ -74,6 +93,9 @@ footer li a {
     font-size: 20px;
     font-family: "Roboto Condensed", sans-serif;
     transition: 0.1s ease;
+}
+.nav li a:hover {
+    color: #999;
 }
 .logoNav {
     height: 50px;
@@ -228,7 +250,7 @@ footer li a {
     text-transform: none;
     font-family: "Roboto Condensed", sans-serif;
     width: 100%;
-    transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 .contactItem:hover .linkTooltip {
     opacity: 1;
@@ -290,6 +312,9 @@ footer li a {
     text-transform: uppercase;
     color: #fd990a;
 }
+.linkHolder a:hover {
+    color: #ff6262;
+}
 .projectsContainer {
     display: flex;
     justify-content: space-between;
@@ -335,6 +360,9 @@ footer li a {
     background: #c53333;
     transition: 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
+.thumbnailLink:hover {
+    background: #fb3f3f;
+}
 .thumbnail > a:hover .thumbnailLink, .thumbnailLinkHover {
     bottom: 0;
 }
@@ -360,6 +388,9 @@ footer li a {
 .thumbnailInfo {
     padding: 7% 10% 6% 10%;
     font-size: 17px;
+}
+.thumbnailInfo > a:hover {
+    color: #ff6262;
 }
 .thumbnailInfo h3 {
     margin: 0;
@@ -401,7 +432,7 @@ footer li a {
     cursor: default;
 }
 .skillsList li:hover {
-    background: #fd990a;
+    background: #ff6262;
 }
 .contact {
     color: #333;
@@ -435,6 +466,9 @@ footer li a {
     display: inline-block;
     margin-right: 30px;
 }
+.contactItemBottom > a:hover {
+    color: #ff6262;
+}
 .contactItemBottom img {
     height: 60px;
 }
@@ -443,7 +477,6 @@ footer li a {
     position: relative;
     top: -20px;
     margin-left: 9px;
-    color: #444444;
     font-weight: bold;
 }
 .contactText {

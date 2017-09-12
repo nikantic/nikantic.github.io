@@ -3,80 +3,88 @@ jQuery(document).ready(function($){
     var navList = document.querySelector(".navList");
     var navToggle = document.querySelector(".navToggle");
     var navbarOpen = false;
+    var thumbnail = $(".thumbnail");
+    var thumbnailLink = $(".thumbnailLink");
+    var thumbnailImage = $(".thumbnailImage");
+    var thumbnailAnchor = $(".thumbnailAnchor");
+    var contactItem = $(".contactItem");
+    var linkTooltip = $(".linkTooltip");
+    var contactImage = $(".contactImage");
+    var navLinks = $(".navLinks li");
+
+    // function to handle tap outside of navbar
+    var tapOutsideNav = function(event){
+        var isTapNav = navbar.contains(event.target);
+        var isTapList = navList.contains(event.target);
+
+        if (navbarOpen && !isTapNav || navbarOpen && isTapList) {
+            navbar.classList.remove("navCollapse");
+            navbarOpen = false;
+            document.removeEventListener("click", tapOutsideNav, true);
+        }
+    };
 
     // navbar collapse function
     navToggle.addEventListener("click", function(){
         navbar.classList.toggle("navCollapse");
         navbarOpen = !navbarOpen;
-        document.addEventListener("click", clickOutside, true);
+        document.addEventListener("click", tapOutsideNav, true);
     });
 
-    // function to determine click outside of navbar
-    var clickOutside = function(event){
-        var isClickInside = navbar.contains(event.target);
-        var isClickList = navList.contains(event.target);
+    // function to handle touch outside of thumbnail
+    var touchOutsideThumbnail = function(event){
+        var isTouchThumbnail = $.contains(thumbnail, event.target);
 
-        if (navbarOpen && !isClickInside || navbarOpen && isClickList ) {
-            navbar.classList.remove("navCollapse");
-            navbarOpen = false;
-            document.removeEventListener("click", clickOutside, true);
-        }
-    };
-
-    // function to determine tap outside of thumbnail
-    var tapOutsideThumbnail = function(event){
-        var isTapThumbnail = $.contains($(".thumbnail"), event.target);
-
-        if (!isTapThumbnail) {
-            $(".thumbnail").find(".thumbnailLink").removeClass("thumbnailLinkHover");
-            $(".thumbnail").find(".thumbnailImage").removeClass("thumbnailImageHover");
-            $(".thumbnail").find(".thumbnailAnchor").removeClass("thumbnailLineHover");
-            document.removeEventListener("touchend", tapOutsideThumbnail, true);
+        if (!isTouchThumbnail) {
+            thumbnail.find(thumbnailLink).removeClass("thumbnailLinkHover");
+            thumbnail.find(thumbnailImage).removeClass("thumbnailImageHover");
+            thumbnail.find(thumbnailAnchor).removeClass("thumbnailLineHover");
+            document.removeEventListener("touchend", touchOutsideThumbnail, true);
         }
     };
 
     // handling thumbnail hover on touch devices
-    $(".thumbnail").on("touchend", function(){ 
-        $(".thumbnail").not(this).find(".thumbnailLink").removeClass("thumbnailLinkHover");
-        $(".thumbnail").not(this).find(".thumbnailImage").removeClass("thumbnailImageHover");
-        $(".thumbnail").not(this).find(".thumbnailAnchor").removeClass("thumbnailLineHover");
-        $(this).find(".thumbnailLink").addClass("thumbnailLinkHover");
-        $(this).find(".thumbnailImage").addClass("thumbnailImageHover");
-        $(this).find(".thumbnailAnchor").addClass("thumbnailLineHover");
-        document.addEventListener("touchend", tapOutsideThumbnail, true);
+    thumbnail.on("touchend", function(){ 
+        thumbnail.not(this).find(thumbnailLink).removeClass("thumbnailLinkHover");
+        thumbnail.not(this).find(thumbnailImage).removeClass("thumbnailImageHover");
+        thumbnail.not(this).find(thumbnailAnchor).removeClass("thumbnailLineHover");
+        $(this).find(thumbnailLink).addClass("thumbnailLinkHover");
+        $(this).find(thumbnailImage).addClass("thumbnailImageHover");
+        $(this).find(thumbnailAnchor).addClass("thumbnailLineHover");
+        document.addEventListener("touchend", touchOutsideThumbnail, true);
     });
 
-    // function to determine tap outside of contact buttons
-    var tapOutsideContact = function(event){
-        var isTapContact = $.contains($(".contactItem"), event.target);
+    // function to handle touch outside of contact buttons
+    var touchOutsideContact = function(event){
+        var isTouchContact = $.contains(contactItem, event.target);
 
-        if (!isTapContact) {
-            $(".contactItem").find(".linkTooltip").removeClass("linkTooltipHover").addClass("linkTooltipNoHover");
-            $(".contactItem").find(".contactImage").removeClass("contactImageHover").addClass("contactImageNoHover");
-            document.removeEventListener("touchend", tapOutsideContact, false);
+        if (!isTouchContact) {
+            contactItem.find(linkTooltip).removeClass("linkTooltipHover").addClass("linkTooltipNoHover");
+            contactItem.find(contactImage).removeClass("contactImageHover").addClass("contactImageNoHover");
+            document.removeEventListener("touchend", touchOutsideContact, false);
         }
     };
 
     // handling contact buttons hover on touch devices
-    $(".contactItem").on("touchend", function(e){
-        if ($(this).find(".linkTooltip").hasClass("linkTooltipHover")) {
-            $(this).find(".linkTooltip").removeClass("linkTooltipHover").addClass("linkTooltipNoHover");
-            $(this).find(".contactImage").removeClass("contactImageHover").addClass("contactImageNoHover");
+    contactItem.on("touchend", function(e){
+        if ($(this).find(linkTooltip).hasClass("linkTooltipHover")) {
+            $(this).find(linkTooltip).removeClass("linkTooltipHover").addClass("linkTooltipNoHover");
+            $(this).find(contactImage).removeClass("contactImageHover").addClass("contactImageNoHover");
         } else {
             e.preventDefault();
             e.stopPropagation();
-            document.addEventListener("touchend", tapOutsideContact, false);
-            $(this).find(".linkTooltip").removeClass("linkTooltipNoHover").addClass("linkTooltipHover");
-            $(this).find(".contactImage").removeClass("contactImageNoHover").addClass("contactImageHover");
+            document.addEventListener("touchend", touchOutsideContact, false);
+            $(this).find(linkTooltip).removeClass("linkTooltipNoHover").addClass("linkTooltipHover");
+            $(this).find(contactImage).removeClass("contactImageNoHover").addClass("contactImageHover");
         }
-        // remove the hover classes on the rest of the buttons
-        $(".contactItem").not(this).find(".linkTooltip").removeClass("linkTooltipHover").addClass("linkTooltipNoHover");
-        $(".contactItem").not(this).find(".contactImage").removeClass("contactImageHover").addClass("contactImageNoHover");
+        // remove the hover classes from the rest of the buttons
+        contactItem.not(this).find(linkTooltip).removeClass("linkTooltipHover").addClass("linkTooltipNoHover");
+        contactItem.not(this).find(contactImage).removeClass("contactImageHover").addClass("contactImageNoHover");
     });
 
     // scroll to and animate function
     $(function() {
-        $(".navLinks li").bind("click", function(){
+        navLinks.bind("click", function(){
             var $anchor = $(this).find("a");
             $("html, body").stop().animate({
                 scrollTop: $($anchor.attr("href")).offset().top
