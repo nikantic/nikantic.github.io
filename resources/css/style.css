@@ -47,7 +47,7 @@ footer li a {
     overflow: hidden;
     position: absolute;
     width: 100%;
-    z-index: 24;
+    z-index: 10;
     transition: 0.3s ease;
     top: 0;
     display: grid;
@@ -55,6 +55,7 @@ footer li a {
 }
 .navCollapse {
     height: 50vh;
+    z-index: 14;
     background: #ffffff;
     display: inline-grid;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
@@ -97,17 +98,40 @@ footer li a {
 .nav li a:hover {
     color: #999;
 }
+.quickNav {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 57px;
+    width: auto;
+    z-index: 12;
+}
+.quickNav li {
+    font-size: 22px;
+    display: inline-block;
+    margin-right: 13px;
+    color: #f9f9f9;
+    text-transform: lowercase;
+}
+.quickNav li a:hover {
+    color: #fff;
+}
 .logoNav {
-    height: 50px;
+    height: 40px;
+    padding: 2px;
     position: absolute;
     visibility: hidden;
+    left: -20px;
     opacity: 0;
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navCollapse .logoNav {
     visibility: visible;
-    height: 40px;
-    padding: 2px;
+    transform: translate(20px, 0);
+    -webkit-transform: translate(20px, 0);
+    -moz-transform: translate(20px, 0);
     opacity: 0.7;
 }
 .navToggle {
@@ -146,7 +170,7 @@ footer li a {
     opacity: 1;
 }
 .iconBarHolder span.icon-bar {
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 .navCollapse .iconBarHolder span:nth-child(1) {
     transform: rotate(45deg);
@@ -579,6 +603,9 @@ footer li a {
     .linkTooltip {
         font-size: 18px;
     }
+    .quickNav {
+        display: block;
+    }
 }
 @media(max-width: 505px) {
     .contactItemBottom {
@@ -590,6 +617,14 @@ footer li a {
     }
     footer span {
         display: block;
+    }
+    .quickNav {
+        width: 86%;
+        margin: 0;
+    }
+    .quickNav li {
+        margin-right: 0;
+        width: 28%;
     }
 }
 @media(max-width: 350px) {
@@ -635,5 +670,10 @@ footer li a {
         height: 60px;
         margin: 20px;
         padding: 20px;
+    }
+}
+@media(max-height: 420px) {
+    .quickNav {
+        display: none;
     }
 }
