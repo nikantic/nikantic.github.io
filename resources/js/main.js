@@ -84,7 +84,7 @@ jQuery(document).ready(function($){
 
     // scroll to and animate function
     $(function() {
-        navLinks.bind("click", function(){
+        navLinks.bind("click", function(event){
             var $anchor = $(this).find("a");
             $("html, body").stop().animate({
                 scrollTop: $($anchor.attr("href")).offset().top
