@@ -11,6 +11,9 @@ jQuery(document).ready(function($){
     var linkTooltip = $(".linkTooltip");
     var contactImage = $(".contactImage");
     var navLinks = $(".navLinks li");
+    var theNav = $(".nav");
+    var theNavToggle = $(".navToggle");
+    var theQuickNav = $(".quickNav");
 
     // function to handle tap outside of navbar
     var tapOutsideNav = function(event){
@@ -91,5 +94,27 @@ jQuery(document).ready(function($){
             }, 500, "easeOutSine");
             event.preventDefault();
         });
+    });
+
+    // function to show navbar on top and hide it on scroll
+    var didScroll;
+
+    $(window).scroll(function(event){
+        if ($(this).scrollTop() === 0) {
+            theNav.removeClass("navCollapse").addClass("navTop");
+            theNavToggle.addClass("navToggleTop");
+            theQuickNav.addClass("quickNavTop");
+            didScroll = false;
+        }
+        if ($(this).scrollTop() >= 30) {
+            theNavToggle.removeClass("navToggleTop");
+            theQuickNav.removeClass("quickNavTop");
+            theNav.removeClass("navTop");
+            didScroll = true;
+        } else {
+            theNavToggle.addClass("navToggleTop");
+            theNav.addClass("navTop");
+            theQuickNav.addClass("quickNavTop");
+        }
     });
 });
