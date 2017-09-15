@@ -117,4 +117,16 @@ jQuery(document).ready(function($){
             theQuickNav.addClass("quickNavTop");
         }
     });
+
+    // fade in background image once it's loaded
+    var backgroundImg = new Image();
+    backgroundImg.src = "resources/css/images/background.png";
+
+    if(backgroundImg.complete) {
+        $(".hero").addClass("heroLoad");
+    } else {
+        backgroundImg.addEventListener('load', function() {
+          $(".hero").addClass("heroLoad");
+        });
+    }
 });

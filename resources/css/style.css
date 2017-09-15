@@ -255,6 +255,20 @@ footer li a {
     background-repeat: no-repeat;
 }
 .hero:before {
+    opacity: 1;
+    background-color: #ffc9c8;
+    content: '';
+    display: block;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 1s ease;
+}
+.hero:after {
     margin-bottom: -1px;
     min-height: 60px;
     width: 100%;
@@ -267,6 +281,9 @@ footer li a {
     bottom: 0;
     background-position: center bottom;
     background-repeat: repeat-x;
+}
+.heroLoad:before  {
+    opacity: 0;
 }
 .hero h1 {
     margin: 0;
@@ -298,6 +315,7 @@ footer li a {
     border: 2px solid rgba(255, 255, 255, 0);
     text-align: center;
     position: relative;
+    z-index: 4;
     padding: 20px;
     text-decoration: none;
     background: #484848;
@@ -347,6 +365,7 @@ footer li a {
     visibility: hidden !important;
 }
 .heroTop {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
