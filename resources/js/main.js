@@ -11,6 +11,7 @@ jQuery(document).ready(function($){
     var linkTooltip = $(".linkTooltip");
     var contactImage = $(".contactImage");
     var navLinks = $(".navLinks li");
+    var logoNavLink = $(".logoNavLink");
     var theNav = $(".nav");
     var theNavToggle = $(".navToggle");
     var theQuickNav = $(".quickNav");
@@ -96,6 +97,15 @@ jQuery(document).ready(function($){
         });
     });
 
+    // scroll to top animation
+    logoNavLink.on("click", function(event){
+        event.preventDefault();
+        $("html, body").animate({
+            scrollTop: 0 ,
+            }, 300
+        );
+    });
+
     // function to show navbar on top and hide it on scroll
     var didScroll;
 
@@ -104,6 +114,7 @@ jQuery(document).ready(function($){
             theNav.removeClass("navCollapse").addClass("navTop");
             theNavToggle.addClass("navToggleTop");
             theQuickNav.addClass("quickNavTop");
+            navbarOpen = false;
             didScroll = false;
         }
         if ($(this).scrollTop() >= 30) {
@@ -125,7 +136,7 @@ jQuery(document).ready(function($){
     if(backgroundImg.complete) {
         $(".hero").addClass("heroLoad");
     } else {
-        backgroundImg.addEventListener('load', function() {
+        backgroundImg.addEventListener("load", function() {
           $(".hero").addClass("heroLoad");
         });
     }

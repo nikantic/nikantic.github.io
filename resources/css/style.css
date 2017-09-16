@@ -87,7 +87,7 @@ footer li a {
     display: flex;
     justify-content: center;
 }
-.navLinks li {
+.navLinks li, .logoNavLink {
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 .nav li {
@@ -755,6 +755,13 @@ footer li a {
         transform: translate(0, 16px);
         -webkit-transform: translate(0, 16px);
         -moz-transform: translate(0, 16px);
+    }
+    .logoNavLink {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        padding: 2px;
+        z-index: 4;
     }
 }
 @media(max-width: 505px) {
