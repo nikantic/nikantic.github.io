@@ -594,6 +594,73 @@ footer li a {
 .footerNav {
     text-align: right;
 }
+/* No script elements */
+.hideMsg {
+    position: absolute;
+    z-index: 5;
+    top: 53px;
+    right: 10px;
+    animation: blink 1s 1s forwards;
+}
+.noScriptLang {
+    display: none;
+    position: absolute;
+    z-index: 14;
+    top: 9px;
+    right: 13px;
+    padding: 1px;
+    font-size: 22px;
+    color: #fff;
+}
+.noScriptMsg {
+    position: absolute;
+    z-index: 5;
+    top: 57px;
+    right: 13px;
+    color: #333;
+    background: #fff;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 0 30px 0 16px;
+    margin: 5px;
+    display: none; 
+}
+.hideMsg p {
+    background: #fd990a;
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin: 0;
+    cursor: pointer;
+}
+.hideMsg:focus {
+    background: #fd990a;
+}
+.hideMsg:focus ~ .noScriptMsg {
+    display: block;
+}
+
+@keyframes blink {
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*MEDIA QUERIES*/
 
 @media(min-width: 1900px) {
@@ -651,7 +718,6 @@ footer li a {
         background-color: transparent;
         border-radius: 0;
         display: grid;
-        position: fixed;
         width: 100%;
     }
     .nav ul {
@@ -762,6 +828,9 @@ footer li a {
         width: 40px;
         padding: 2px;
         z-index: 4;
+    }
+    .noScriptLang {
+        display: block;
     }
 }
 @media(max-width: 505px) {
