@@ -568,7 +568,7 @@ footer li a {
     margin-right: 30px;
 }
 .contactItemBottom > a:hover {
-    color: #ff6262;
+    color: #000;
 }
 .contactItemBottom img {
     height: 60px;
