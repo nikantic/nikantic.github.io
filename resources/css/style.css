@@ -186,12 +186,12 @@ footer li a {
 .navCollapse .languagePicker a:hover {
     color: #cc6060 !important;
 }
-.navCollapse .languagePicker a:nth-child(2) {
+.navCollapse .languagePicker a {
     color: inherit;
 }
 .languagePicker .languageSelected, .languagePicker .languageSelected:hover {
     pointer-events:none;
-    color: #b78787;
+    color: #b78787 !important;
 }
 .navToggle {
     width: 51px;
@@ -400,6 +400,7 @@ footer li a {
     font-size: 35px;
     width: 90%;
     margin: 123px auto 30px auto;
+    line-height: 1.2;
     font-weight: 300;
     font-family: "Josefin Sans", serif;
     text-align: center;
@@ -488,6 +489,7 @@ footer li a {
 .thumbnailInfo {
     padding: 7% 10% 6% 10%;
     font-size: 17px;
+    line-height: 1.5;
 }
 .thumbnailInfo > a:hover {
     color: #ff6262;
@@ -525,7 +527,7 @@ footer li a {
     border: 1px solid #eaeaea;
     display: inline-block;
     padding: 5px 15px;
-    margin: 5px;
+    margin: 8px;
     color: #5d5d5d;
     border-radius: 2px;
     -webkit-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -582,6 +584,7 @@ footer li a {
 .contactText {
     margin-bottom: 40px;
     padding: 0 50px;
+    line-height: 1.2;
     font-family: "Josefin Sans", serif;
 }
 .contact h2 {
