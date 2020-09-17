@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Long+Cang&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import "./mixins.scss";
 
 body {
   margin: 0;
@@ -28,7 +29,7 @@ body {
       height: 80%;
       display: flex;
       align-items: center;
-      margin: 0 150px;
+      margin: 0 10vw;
     }
 
     .Section2Right {
@@ -45,6 +46,10 @@ body {
 
     .OpenSourceSection, .SkillsSection {
       margin-top: 65px;
+
+      @include laptop {
+        margin-top: 48px;
+      }
     }
     
     .OpenSourceSectionProjects {
@@ -54,9 +59,17 @@ body {
   }
 }
 
+.ImagesHolder {
+  position: relative;
+  width: 700px;
+  height: 600px;
+  max-width: 80%;
+    max-height: 65%;
+}
+
 .SkillItem {
   margin-right: 8px;
-  padding: 3px;
+  padding: 0 3px;
   display: inline-block;
   font-family: monospace;
 }

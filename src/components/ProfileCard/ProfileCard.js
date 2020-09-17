@@ -43,9 +43,9 @@ const ProfileCard = () => {
         </div>
         <div className="ProfileInfoTopHolder">
           <p>Frontend Developer - Javascript / React</p>
-          <p>Belgrade, Serbia</p>
+          <p className="ProfileInfoLocation">Belgrade, Serbia</p>
         </div>
-        <div>
+        <div className="ProfileInfoDescription">
           <p>
             I'm currently a Creative Frontend Developer at Qode Interactive. I
             love working with talented designers and developers to deliver cool

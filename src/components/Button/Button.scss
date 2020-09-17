@@ -1,3 +1,5 @@
+@import "../../mixins";
+
 .Button {
   display: inline-block;
   color: #d85936;
@@ -5,6 +7,12 @@
   
   &:nth-child(1) {
     margin-right: 15px;
+    margin-bottom: 15px;
+
+    @include laptop {
+      margin-right: 4px;
+      margin-bottom: 10px;
+    }
   }
 
   a {
@@ -15,5 +23,9 @@
     font-family: sans-serif;
     font-size: 13px;
     letter-spacing: 0.03em;
+
+    @include laptop {
+      padding: 10px 22px;
+    }
   }
 }
