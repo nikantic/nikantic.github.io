@@ -1,0 +1,40 @@
+.ProfileCard {
+  width: 430px;
+  padding: 50px;
+  background: #fff;
+  position: relative;
+  max-height: 100%;
+  box-sizing: border-box;
+
+  img {
+    width: 320px;
+    border-radius: 100%;
+    border: 1px solid #ececec;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
+.ProfileCardShadow {
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  top: 0;
+  left: -28%;
+  background: radial-gradient(circle, rgba(0,0,0,.03) 12%, rgba(255,255,255,0) 72%);
+  z-index: -1;
+}
+
+.ProfileInfoTopHolder {
+  margin: 20px 0;
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.ProfileImageHolder {
+  text-align: center;
+  margin-bottom: 25px;
+}

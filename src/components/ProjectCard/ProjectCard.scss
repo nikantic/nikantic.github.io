@@ -1,0 +1,40 @@
+.ProjectCard {
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #cecece;
+  width: 31%;
+  box-sizing: border-box;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+
+.ProjectCardTitle {
+  margin-bottom: 10px;
+  text-decoration: none;
+
+  .SocialIcon {
+    top: 2px;
+    position: relative;
+    margin-left: 0;
+  }
+}
+
+.ProjectCardDescription {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.ProjectCardTech {
+  margin-top: 30px;
+  font-family: monospace;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  
+  span {
+  margin-right: 8px;
+  padding: 3px;
+  border: 1px solid #757575;
+  }
+}
+}

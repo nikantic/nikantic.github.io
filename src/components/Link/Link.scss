@@ -1,0 +1,82 @@
+.Link a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+.TextLink {
+  border-bottom: 1px solid #ececec;
+  height: 25%;
+    display: flex;
+    align-items: center;
+
+  &:nth-child(2) {
+    margin-top: 28px;
+  }
+
+  a {
+    display: inline-block;
+    padding: 50px 0px 50px 150px;
+    font-size: 9vh;
+    color: currentColor;
+    letter-spacing: 0.01em;
+  }
+}
+
+.ImagesHolder {
+  position: relative;
+  width: 700px;
+  height: 600px;
+}
+
+.ImageLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, 0.03);
+  backface-visibility: hidden;
+
+  a {
+    border: 2px solid #ffffff;
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:nth-child(1) {
+    margin-top: 28px;
+    margin-left: 10px;
+    transform: rotate(-4deg);
+  }
+
+  &:nth-child(2) {
+    margin-top: 20px;
+    margin-left: 20px;
+    transform: rotate(-2deg);
+  }
+
+  &:nth-child(3) {
+    transform: rotate(5deg);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-bottom: 130px solid #fff;
+  }
+  
+  .ImageDescription {
+    font-family: "Long Cang", cursive;
+    position: absolute;
+    bottom: 6%;
+    font-size: 44px;
+    width: 100%;
+    text-align: right;
+    padding: 0 8%;
+    box-sizing: border-box;
+  }
+}

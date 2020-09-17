@@ -1,0 +1,95 @@
+{
+  "projects": [
+    {
+      "name": "Heyyy",
+      "date": "August 2020",
+      "image": "./assets/img/first.jpg",
+      "url": "https://github.com/yannickcr/eslint-plugin-react/issues/2054"
+    },
+    {
+      "name": "Badaaa",
+      "date": "Jun 2020",
+      "image": "./assets/img/first.jpg",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "Heyyy",
+      "date": "August 2020",
+      "image": "./assets/img/first.jpg",
+      "url": "https://github.com/yannickcr/eslint-plugin-react/issues/2054"
+    },
+    {
+      "name": "Badaaa",
+      "date": "Jun 2020",
+      "image": "./assets/img/first.jpg",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "Heyyy",
+      "date": "August 2020",
+      "image": "./assets/img/first.jpg",
+      "url": "https://github.com/yannickcr/eslint-plugin-react/issues/2054"
+    },
+    {
+      "name": "Badaaa",
+      "date": "Jun 2020",
+      "image": "./assets/img/first.jpg",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "Heyyy",
+      "date": "August 2020",
+      "image": "./assets/img/first.jpg",
+      "url": "https://github.com/yannickcr/eslint-plugin-react/issues/2054"
+    },
+    {
+      "name": "Badaaa",
+      "date": "Jun 2020",
+      "image": "./assets/img/first.jpg",
+      "url": "https://github.com/"
+    }
+  ],
+  "openSourceProjects": [
+    {
+      "name": "react-currency-app",
+      "date": "August 2020",
+      "description": "Currency Exchange App built with React and Redux.",
+      "tech": ["react", "redux"],
+      "url": "https://github.com/nikantic/react-currency-app"
+    },
+    {
+      "name": "my-react-stopwatch",
+      "date": "August 2020",
+      "description": "A simple React Stopwatch App.",
+      "tech": ["react", "redux"],
+      "url": "https://github.com/nikantic/react-currency-app"
+    },
+    {
+      "name": "react-currency-app",
+      "date": "August 2020",
+      "description": "Currency Exchange App built with React and Redux.",
+      "tech": ["react", "redux"],
+      "url": "https://github.com/nikantic/react-currency-app"
+    }
+  ],
+  "skills": [
+    "React",
+    "Redux",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Git",
+    "REST",
+    "API",
+    "Node",
+    "Express",
+    "MongoDB",
+    "Gulp",
+    "Photoshop",
+    "Illustrator",
+    "Responsive",
+    "Usability",
+    "English",
+    "Deutsch"
+  ]
+}
