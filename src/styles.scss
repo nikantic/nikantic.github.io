@@ -20,12 +20,22 @@ body {
   left: 100px;
   overflow: hidden;
 
+  @include tablet {
+    position: relative;
+    height: inherit;
+  }
+
+  @include phone {
+    left: 0;
+    width: 100%;
+  }
+
   &.Section2 {
     justify-content: flex-start;
     align-items: center;
 
     @include tablet {
-      overflow-y: scroll;
+      background-color: #fbfbfb;
     }
 
     .Section2Inner {
@@ -38,6 +48,10 @@ body {
       @include tablet {
         flex-direction: column;
         height: inherit;
+      }
+
+      @include phone {
+        margin: 0;
       }
     }
 
@@ -85,6 +99,11 @@ body {
   height: 600px;
   max-width: 80%;
   max-height: 65%;
+
+  @include phone {
+    max-width: 125%;
+    max-height: 71%;
+  }
 }
 
 .SkillItem {
@@ -110,6 +129,7 @@ body {
 
     @include tablet {
       width: 100%;
+      position: relative;
     }
   }
 
@@ -123,9 +143,14 @@ body {
     );
 
     @include tablet {
-      left: 25%;
+      position: fixed;
+      left: 34%;
       opacity: 0.3;
       background: none;
+    }
+
+    @include phone {
+      left: 18%;
     }
   }
 }

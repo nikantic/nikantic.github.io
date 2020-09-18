@@ -5,8 +5,7 @@ const Header = () => {
   return (
     <div className="Header">
       <div className="HeaderTitleHolder">
-        <p className="HeaderTitle HeaderTitle1">Highlights</p>
-        <p className="HeaderTitle HeaderTitle2">About me</p>
+        {window.innerWidth > 1024 ? <div><p className="HeaderTitle HeaderTitle1">Highlights</p><p className="HeaderTitle HeaderTitle2">About me</p></div> : <p className="HeaderTitle HeaderTitle1">Portfolio</p>}
       </div>
       <div className="HeaderSmallText">
         <div>Nikola Antic \\</div>

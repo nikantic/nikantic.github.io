@@ -17,7 +17,6 @@ const data = {
 };
 
 data.fakeScrollHeight = data.globalSpeed * 1000;
-if (window.innerWidth < 1025) data.ease = 1;
 
 const updateProgress = () => {
   let curProgress = data.timeline.progress();
@@ -32,29 +31,31 @@ class App extends Component {
   }
 
   componentDidMount() {
-    data.timeline = timelineController(
-      this.AppRef.current.querySelector(".Section1"),
-      this.AppRef.current.querySelector(".Section2"),
-      this.AppRef.current.querySelectorAll(".TextLink"),
-      this.AppRef.current.querySelectorAll(".ImageLink"),
-      this.AppRef.current.querySelector(".HeaderTitle1"),
-      this.AppRef.current.querySelector(".HeaderTitle2")
-    );
-    window.addEventListener("scroll", () => {
-      data.timelineProgress =
-        window.scrollY * (1 / (data.fakeScrollHeight - window.innerHeight));
-    });
+    if (window.innerWidth > 1024) {
+      data.timeline = timelineController(
+        this.AppRef.current.querySelector(".Section1"),
+        this.AppRef.current.querySelector(".Section2"),
+        this.AppRef.current.querySelectorAll(".TextLink"),
+        this.AppRef.current.querySelectorAll(".ImageLink"),
+        this.AppRef.current.querySelector(".HeaderTitle1"),
+        this.AppRef.current.querySelector(".HeaderTitle2")
+      );
+      window.addEventListener("scroll", () => {
+        data.timelineProgress =
+          window.scrollY * (1 / (data.fakeScrollHeight - window.innerHeight));
+      });
 
-    this.AppRef.current.querySelector(".FakeScroll").style.height =
-      data.fakeScrollHeight + "px";
+      this.AppRef.current.querySelector(".FakeScroll").style.height =
+        data.fakeScrollHeight + "px";
 
-    gsap.ticker.add(updateProgress);
+      gsap.ticker.add(updateProgress);
+    }
   }
   render() {
     return (
       <div className="App" ref={this.AppRef}>
         <div className="FakeScroll"></div>
-        <Header />
+        {window.innerWidth > 600 ? <Header /> : null}
         <div className="Section Section1">
           <div className="Side LeftSide">
             {projectsData.projects.map((project, index) => {
