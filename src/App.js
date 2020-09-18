@@ -12,14 +12,16 @@ import ProjectCard from "./components/ProjectCard/ProjectCard";
 const data = {
   globalSpeed: 6,
   timelineProgress: 0,
+  ease: 0.1,
   timeline: null
 };
 
 data.fakeScrollHeight = data.globalSpeed * 1000;
+if (window.innerWidth < 1025) data.ease = 1;
 
 const updateProgress = () => {
   let curProgress = data.timeline.progress();
-  curProgress += (data.timelineProgress - curProgress) * 0.1;
+  curProgress += (data.timelineProgress - curProgress) * data.ease;
   data.timeline.progress(curProgress);
 };
 

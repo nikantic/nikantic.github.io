@@ -1,3 +1,5 @@
+@import "../../mixins";
+
 .Link a {
   display: block;
   text-decoration: none;
@@ -7,8 +9,8 @@
 .TextLink {
   border-bottom: 1px solid #ececec;
   height: 25%;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
   a {
     display: inline-block;
@@ -27,6 +29,10 @@
   height: 100%;
   box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, 0.03);
   backface-visibility: hidden;
+
+  @include tablet {
+    box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, 0.13);
+  }
 
   a {
     border: 2px solid #ffffff;
@@ -58,7 +64,7 @@
     box-sizing: border-box;
     border-bottom: 130px solid #fff;
   }
-  
+
   .ImageDescription {
     font-family: "Long Cang", cursive;
     position: absolute;

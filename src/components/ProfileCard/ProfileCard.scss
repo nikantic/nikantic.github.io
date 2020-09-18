@@ -16,6 +16,10 @@
     }
   }
 
+  @include tablet {
+    margin-top: 70px;
+  }
+
   img {
     width: 320px;
     border-radius: 100%;
@@ -36,13 +40,17 @@
   height: 100%;
   top: 0;
   left: -28%;
-  background: radial-gradient(circle, rgba(0,0,0,.03) 12%, rgba(255,255,255,0) 72%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.03) 12%,
+    rgba(255, 255, 255, 0) 72%
+  );
   z-index: -1;
 }
 
 .ProfileInfoTopHolder {
   margin: 20px 0;
-  
+
   p {
     margin: 0;
     padding: 0;
@@ -61,14 +69,14 @@
 
 .ProfileInfoLocation {
   margin-top: 7px;
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .ProfileInfoDescription p {
-    font-size: 14px;
-    color: #5f5f5f;
+  font-size: 14px;
+  color: #5f5f5f;
 
-    @include laptop {
-      font-size: 13px;
-    }
+  @include laptop {
+    font-size: 13px;
+  }
 }

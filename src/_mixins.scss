@@ -1,3 +1,11 @@
 @mixin laptop {
-  @media (max-width: 1400px) { @content; }
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
 }
