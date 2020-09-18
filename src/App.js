@@ -60,7 +60,7 @@ class App extends Component {
           <div className="Side LeftSide">
             {projectsData.projects.map((project, index) => {
               return (
-                <Link key={index} customClass="TextLink" linkTo={project.url}>
+                <Link key={'TextLink_' + index} customClass="TextLink" linkTo={project.url}>
                   {project.name}
                 </Link>
               );
@@ -71,7 +71,7 @@ class App extends Component {
               {projectsData.projects.map((project, index) => {
                 return (
                   <Link
-                    key={index}
+                    key={'ImageLink_' + index}
                     customClass="ImageLink"
                     linkTo={project.url}
                   >
@@ -100,7 +100,7 @@ class App extends Component {
                     {projectsData.openSourceProjects.map((project, index) => {
                       return (
                         <ProjectCard
-                          key={index}
+                          key={'OpenSourceProject_' + index}
                           title={project.name}
                           description={project.description}
                           linkTo={project.url}
@@ -113,8 +113,8 @@ class App extends Component {
                 <div className="SkillsSection">
                   <h2>Skills</h2>
                   <div className="SkillsSectionInner">
-                    {projectsData.skills.map((skill) => {
-                      return <span className="SkillItem">{skill}</span>;
+                    {projectsData.skills.map((skill, index) => {
+                      return <span key={'Skill_' + index} className="SkillItem">{skill}</span>;
                     })}
                   </div>
                 </div>

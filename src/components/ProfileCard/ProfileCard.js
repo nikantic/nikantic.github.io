@@ -16,26 +16,31 @@ const ProfileCard = () => {
         <h1>Nikola Antic</h1>
         <div className="SocialIconsHolder">
           <SocialIcon
+            isLink
             icon="GitHub"
             size="18"
             socialLink="https://avatars1.com"
           />
           <SocialIcon
+            isLink
             icon="Instagram"
             size="18"
             socialLink="https://avatars1.com"
           />
           <SocialIcon
+            isLink
             icon="Codepen"
             size="18"
             socialLink="https://avatars1.com"
           />
           <SocialIcon
+            isLink
             icon="Codesandbox"
             size="18"
             socialLink="https://avatars1.com"
           />
           <SocialIcon
+            isLink
             icon="Linkedin"
             size="18"
             socialLink="https://avatars1.com"

@@ -8,12 +8,15 @@ const FeatherIcon = (props) => {
   return <TagName size={props.size} />;
 };
 
-const SocialIcon = (props) => {
+const SocialIcon = (props, isLink) => {
   return (
-    <Link customClass="SocialIcon" linkTo={props.socialLink}>
+    props.isLink ?
+      <Link customClass="SocialIcon" linkTo={props.socialLink}>
+        <FeatherIcon iconName={props.icon} size={props.size} />
+      </Link>
+      :
       <FeatherIcon iconName={props.icon} size={props.size} />
-    </Link>
-  );
+  )
 };
 
 export default SocialIcon;

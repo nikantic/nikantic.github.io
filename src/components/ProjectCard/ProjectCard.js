@@ -16,8 +16,8 @@ const ProjectCard = (props) => {
       </a>
       <div className="ProjectCardDescription">{props.description}</div>
       <div className="ProjectCardTech">
-        {props.tech.map((item) => {
-          return <span>{item}</span>;
+        {props.tech.map((item, index) => {
+          return <span key={'ProjectCard_' + index}>{item}</span>;
         })}
       </div>
     </div>
