@@ -1,19 +1,29 @@
-# My portfolio
+# My Portfolio
 
-This is my [portfolio](https://nikantic.github.io/) page, where you can find ways to contact me, see my projects and view resume. It is fully responsive and includes the following user experience features:
+This is my new [portfolio](https://nikantic.github.io/) website, built with React and GSAP. There you can find the ways to contact me, see my projects and view my resume. This repository also includes my old portfolio.
 
-- hover handling on mobile/touch devices via JavaScript touch events
-- auto hiding navigation bar
-- scroll to animation
-- multiple language support
-- noscript functionality support
-- background image fade in once it's loaded
+## Features
+
+- GSAP timeline hooked on scroll for cool UX
+- React Components - Button, Header, Link, Logo, ProfileCard, ProjectCard, SocialIcon
+- SASS mixins for responsive styling
+- lite tablet and phone experience for better usability
+- gh-pages deploy support
 
 ## Built with
 
-- HTML
-- CSS
-- JavaScript
-- jQuery
-- jQuery Easing Plugin
-- [Material icons](https://material.io/icons/)
+- React
+- GSAP
+- SASS
+- React Feather
+- React Github Calendar
+- Webpack
+
+## How to run
+
+After you clone this app, here are the NPM commands to run:
+
+-   `npm install` to install the dependencies
+-   `npm start` to start the development server
+-   `npm run build` to create the production build
+-   `npm run deploy` to deploy to gh-pages (defined in package.json file)
