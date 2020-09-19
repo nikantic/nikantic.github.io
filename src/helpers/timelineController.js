@@ -1,6 +1,5 @@
 import gsap from "gsap";
 
-//  this needs to support infinite images and rotation
 let directions = [
   { x: '120%', y: '0%', rotation: 5 },
   { x: '10%', y: '115%', rotation: 3 },

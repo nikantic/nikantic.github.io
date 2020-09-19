@@ -52,15 +52,14 @@ const ProfileCard = () => {
         </div>
         <div className="ProfileInfoDescription">
           <p>
-            I'm currently a Creative Frontend Developer at Qode Interactive. I
-            love working with talented designers and developers to deliver cool
+            I'm currently a Creative Frontend Developer at Qode Interactive. I work with talented designers and developers to deliver cool
             and innovative experiences on the web.
           </p>
         </div>
       </div>
       <div className="ButtonsHolder">
         <Button linkTo="mailto:nikantic@outlook.com" text="Message" />
-        <Button linkTo="https://avatars1.com" text="Download CV" />
+        <Button linkTo={process.env.PUBLIC_URL + "/assets/Nikola_Antic_CV.pdf"} text="Download CV" />
       </div>
     </div>
   );
