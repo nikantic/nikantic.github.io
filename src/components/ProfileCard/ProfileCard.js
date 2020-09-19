@@ -43,7 +43,7 @@ const ProfileCard = () => {
             isLink
             icon="Linkedin"
             size="18"
-            socialLink="https://www.linkedin.com/in/nikola-anti%C4%87-9774b615b/"
+            socialLink="https://www.linkedin.com/in/nikantic"
           />
         </div>
         <div className="ProfileInfoTopHolder">
