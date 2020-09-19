@@ -2,14 +2,13 @@ import gsap from "gsap";
 
 //  this needs to support infinite images and rotation
 let directions = [
-  { x: 830, y: 0 },
-  { x: 100, y: 650 },
-  { x: 100, y: -650 },
-  { x: 100, y: 700 },
-  { x: 830, y: 0 },
-  { x: 100, y: 670 },
-  { x: 100, y: -750 },
-  { x: 100, y: 600 }
+  { x: '120%', y: '0%', rotation: 5 },
+  { x: '10%', y: '115%', rotation: 3 },
+  { x: '10%', y: '-115%', rotation: 5 },
+  { x: '10%', y: '115%', rotation: 5 },
+  { x: '128%', y: '0%', rotation: 5 },
+  { x: '10%', y: '125%', rotation: 0 },
+  { x: '10%', y: '-117%', rotation: 10 }
 ];
 
 const resetIndexes = (Images) => {
@@ -35,10 +34,10 @@ const timelineController = (
 
   tl.to(
     TextLinks,
-    1,
     {
       y: -window.innerHeight,
       ease: "power2.inOut",
+      duration: 1,
       stagger: 0.08,
       delay: 0.5
     },
@@ -49,13 +48,13 @@ const timelineController = (
     index !== Images.length - 1 &&
       tl.to(
         image,
-        0.4,
         {
           x: directions[index].x,
           y: directions[index].y,
-          rotationZ: 5,
-          delay: index * 0.3,
-          ease: "power2.inOut",
+          duration: 0.4,
+          rotationZ: directions[index].rotation,
+          delay: index * 0.4,
+          ease: "power1.inOut",
           onReverseComplete: () => {
             if (index > 0) {
               zIndex++;
@@ -80,29 +79,29 @@ const timelineController = (
   tl.addLabel("move-section")
     .to(
       Section1,
-      1,
       {
         y: -window.innerHeight,
         autoAlpha: 0,
+        duration: 1,
         ease: "power3.inOut"
       },
       "move-section"
     )
     .from(
       Section2,
-      1,
       {
         y: window.innerHeight,
+        duration: 1,
         ease: "power3.inOut"
       },
       "move-section"
     )
     .to(
       HeaderTitle1,
-      0.5,
       {
         y: "-100%",
         autoAlpha: 0,
+        duration: 0.5,
         delay: 0.3,
         ease: "power3.inOut"
       },
@@ -110,9 +109,9 @@ const timelineController = (
     )
     .from(
       HeaderTitle2,
-      0.5,
       {
         y: "100%",
+        duration: 0.5,
         delay: 0.3,
         ease: "power3.inOut"
       },

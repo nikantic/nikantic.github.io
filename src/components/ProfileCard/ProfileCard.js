@@ -19,31 +19,31 @@ const ProfileCard = () => {
             isLink
             icon="GitHub"
             size="18"
-            socialLink="https://avatars1.com"
+            socialLink="https://github.com/nikantic"
           />
           <SocialIcon
             isLink
             icon="Instagram"
             size="18"
-            socialLink="https://avatars1.com"
+            socialLink="https://www.instagram.com/theseriousnick/"
           />
           <SocialIcon
             isLink
             icon="Codepen"
             size="18"
-            socialLink="https://avatars1.com"
+            socialLink="https://codepen.io/nikantic/pens/public"
           />
           <SocialIcon
             isLink
             icon="Codesandbox"
             size="18"
-            socialLink="https://avatars1.com"
+            socialLink="https://codesandbox.io/u/nikantic"
           />
           <SocialIcon
             isLink
             icon="Linkedin"
             size="18"
-            socialLink="https://avatars1.com"
+            socialLink="https://www.linkedin.com/in/nikola-anti%C4%87-9774b615b/"
           />
         </div>
         <div className="ProfileInfoTopHolder">
@@ -59,7 +59,7 @@ const ProfileCard = () => {
         </div>
       </div>
       <div className="ButtonsHolder">
-        <Button linkTo="https://avatars1.com" text="Message" />
+        <Button linkTo="mailto:nikantic@outlook.com" text="Message" />
         <Button linkTo="https://avatars1.com" text="Download CV" />
       </div>
     </div>

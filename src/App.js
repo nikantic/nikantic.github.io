@@ -77,7 +77,7 @@ class App extends Component {
                   >
                     <img
                       alt={project.name}
-                      src="https://source.unsplash.com/random"
+                      src={process.env.PUBLIC_URL + project.image}
                     />
                     <div className="ImageDescription">
                       <p>{project.date}</p>

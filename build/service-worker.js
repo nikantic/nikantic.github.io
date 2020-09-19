@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nikantic.github.io/precache-manifest.4acef051851c0191e3c760d37e0bef79.js"
+  "/nikantic.github.io/precache-manifest.9031f89d67e07cdd74d00dce2e6b42d3.js"
 );
 
 self.addEventListener('message', (event) => {

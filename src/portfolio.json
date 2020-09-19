@@ -1,95 +1,100 @@
 {
   "projects": [
     {
-      "name": "Heyyy",
-      "date": "August 2020",
-      "image": "./assets/img/first.jpg",
-      "url": "https://github.com/yannickcr/eslint-plugin-react/issues/2054"
+      "name": "Amedeo",
+      "date": "December 2018",
+      "image": "/assets/img/amedeo.jpg",
+      "url": "https://qodeinteractive.com/wordpress-theme/amedeo-multi-concept-artist-and-creative-agency-theme/"
     },
     {
-      "name": "Badaaa",
-      "date": "Jun 2020",
-      "image": "./assets/img/first.jpg",
-      "url": "https://github.com/"
+      "name": "Brünn",
+      "date": "December 2018",
+      "image": "/assets/img/brunn.jpg",
+      "url": "https://qodeinteractive.com/wordpress-theme/brunn-creative-agency-theme/"
     },
     {
-      "name": "Heyyy",
-      "date": "August 2020",
-      "image": "./assets/img/first.jpg",
-      "url": "https://github.com/yannickcr/eslint-plugin-react/issues/2054"
+      "name": "Kenozoik",
+      "date": "Jul 2018",
+      "image": "/assets/img/kenozoik.jpg",
+      "url": "https://qodeinteractive.com/wordpress-theme/kenozoik-vibrant-portfolio-theme/"
     },
     {
-      "name": "Badaaa",
-      "date": "Jun 2020",
-      "image": "./assets/img/first.jpg",
-      "url": "https://github.com/"
+      "name": "La Comète",
+      "date": "Jul 2019",
+      "image": "/assets/img/lacomete.jpg",
+      "url": "https://qodeinteractive.com/wordpress-theme/la-comete-fashion-and-clothing-store-theme/"
     },
     {
-      "name": "Heyyy",
-      "date": "August 2020",
-      "image": "./assets/img/first.jpg",
-      "url": "https://github.com/yannickcr/eslint-plugin-react/issues/2054"
+      "name": "Aarhus",
+      "date": "December 2018",
+      "image": "/assets/img/aarhus.jpg",
+      "url": "https://qodeinteractive.com/wordpress-theme/aarhus-modern-architecture-theme/"
     },
     {
-      "name": "Badaaa",
-      "date": "Jun 2020",
-      "image": "./assets/img/first.jpg",
-      "url": "https://github.com/"
+      "name": "UltraViolette",
+      "date": "Jun 2019",
+      "image": "/assets/img/ultraviolette.jpg",
+      "url": "https://qodeinteractive.com/wordpress-theme/ultraviolette-design-portfolio-theme/"
     },
     {
-      "name": "Heyyy",
-      "date": "August 2020",
-      "image": "./assets/img/first.jpg",
-      "url": "https://github.com/yannickcr/eslint-plugin-react/issues/2054"
+      "name": "Elson",
+      "date": "February 2020",
+      "image": "/assets/img/elson.jpg",
+      "url": "https://qodeinteractive.com/wordpress-theme/elson-modern-shop-theme/"
     },
     {
-      "name": "Badaaa",
-      "date": "Jun 2020",
-      "image": "./assets/img/first.jpg",
-      "url": "https://github.com/"
+      "name": "Pelicula",
+      "date": "May 2020",
+      "image": "/assets/img/pelicula.jpg",
+      "url": "https://qodeinteractive.com/wordpress-theme/pelicula-video-production-and-movie-theme/"
     }
   ],
   "openSourceProjects": [
     {
+      "name": "nikantic.github.io",
+      "description": "My portfolio website.",
+      "tech": ["react", "gsap", "sass"],
+      "url": "https://github.com/nikantic/nikantic.github.io"
+    },
+    {
       "name": "react-currency-app",
-      "date": "August 2020",
-      "description": "Currency Exchange App built with React and Redux.",
-      "tech": ["react", "redux"],
+      "description": "Currency Exchange App with real time conversions and store management in Redux.",
+      "tech": ["redux", "react", "api"],
       "url": "https://github.com/nikantic/react-currency-app"
     },
     {
       "name": "my-react-stopwatch",
-      "date": "August 2020",
-      "description": "A simple React Stopwatch App.",
-      "tech": ["react", "redux"],
-      "url": "https://github.com/nikantic/react-currency-app"
-    },
-    {
-      "name": "react-currency-app",
-      "date": "August 2020",
-      "description": "Currency Exchange App built with React and Redux.",
-      "tech": ["react", "redux"],
-      "url": "https://github.com/nikantic/react-currency-app"
+      "description": "A concurrent React Stopwatch App.",
+      "tech": ["react", "es6"],
+      "url": "https://github.com/nikantic/my-react-stopwatch"
     }
   ],
   "skills": [
+    "JavaScript",
     "React",
     "Redux",
     "HTML",
     "CSS",
-    "JavaScript",
+    "SASS",
+    "PHP",
     "Git",
+    "Subversion",
     "REST",
     "API",
     "Node",
     "Express",
+    "MySQL",
     "MongoDB",
+    "WebGL",
     "Gulp",
+    "Webpack",
     "Photoshop",
+    "WordPress",
     "Illustrator",
     "Responsive",
     "Usability",
     "English",
-    "German"
+    "German",
+    "Communication"
   ]
 }
