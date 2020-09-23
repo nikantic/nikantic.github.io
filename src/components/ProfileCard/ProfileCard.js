@@ -52,8 +52,7 @@ const ProfileCard = () => {
         </div>
         <div className="ProfileInfoDescription">
           <p>
-            I'm currently a Creative Frontend Developer at Qode Interactive. I work with talented designers and developers to deliver cool
-            and innovative experiences on the web.
+            I currently work at Qode Interactive with talented developers and designers to deliver the best creative user experience on the web.
           </p>
         </div>
       </div>
