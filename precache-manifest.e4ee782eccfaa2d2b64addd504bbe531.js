@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "acc9e8e2989f3556073e2defaa777f24",
+    "revision": "d219c9e000d0e06239fa8da39c7d4add",
     "url": "/nikantic.github.io/index.html"
   },
   {
-    "revision": "2bc6706dda556626157d",
+    "revision": "df0288953ba55386b92b",
     "url": "/nikantic.github.io/static/css/main.3c8f7268.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nikantic.github.io/static/js/2.cab611b6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2bc6706dda556626157d",
-    "url": "/nikantic.github.io/static/js/main.d91d27d6.chunk.js"
+    "revision": "df0288953ba55386b92b",
+    "url": "/nikantic.github.io/static/js/main.6648bc5c.chunk.js"
   },
   {
     "revision": "f4f826085a02bf8cb95a",
