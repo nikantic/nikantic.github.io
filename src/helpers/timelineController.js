@@ -38,7 +38,7 @@ const timelineController = (
       ease: "power2.inOut",
       duration: 1,
       stagger: 0.08,
-      delay: 0.5
+      delay: 1
     },
     "intro-section"
   );
@@ -50,10 +50,10 @@ const timelineController = (
         {
           x: directions[index].x,
           y: directions[index].y,
-          duration: 0.4,
+          duration: 0.7,
           rotationZ: directions[index].rotation,
           delay: index * 0.4,
-          ease: "power1.inOut",
+          ease: "power3.inOut",
           onReverseComplete: () => {
             if (index > 0) {
               zIndex++;
