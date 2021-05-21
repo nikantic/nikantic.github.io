@@ -6,7 +6,7 @@
 	"main": "src/index.js",
 	"homepage": "https://nikantic.github.io/nikantic.github.io",
 	"dependencies": {
-		"gsap": "3.5.1",
+		"gsap": "3.6.0",
 		"node-sass": "4.14.1",
 		"react": "16.13.1",
 		"react-dom": "16.13.1",
