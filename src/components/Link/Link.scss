@@ -1,103 +1,109 @@
 @import "../../mixins";
 
 .Link a {
-  display: block;
-  text-decoration: none;
-  color: #000;
+	display: block;
+	text-decoration: none;
+	color: #000;
 }
 
 .TextLink {
-  border-bottom: 1px solid #ececec;
-  height: 25%;
-  display: flex;
-  align-items: center;
+	border-bottom: 1px solid #ececec;
+	height: 25%;
+	display: flex;
+	align-items: center;
 
-  a {
-    display: inline-block;
-    font-size: 9vh;
-    color: currentColor;
-    letter-spacing: 0.01em;
-    padding-left: 10vw;
+	a {
+		display: inline-block;
+		font-size: 9vh;
+		color: currentColor;
+		letter-spacing: 0.01em;
+		padding-left: 10vw;
 
-    @include phone {
-      font-size: 6vh;
-    }
-  }
+		@include phone {
+			font-size: 6vh;
+		}
+	}
 }
 
 .ImageLink {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, 0.03);
-  backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, 0.03);
+	backface-visibility: hidden;
 
-  @include tablet {
-    box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, 0.13);
-  }
+	@include tablet {
+		box-shadow: 4px -4px 20px 0px rgba(0, 0, 0, 0.13);
+	}
 
-  a {
-    border: 2px solid #ffffff;
-    line-height: 0;
-    width: 100%;
-    height: 100%;
-  }
+	a {
+		border: 2px solid #ffffff;
+		line-height: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
 
-  @include tablet {
-    @for $i from 1 through 8 {
-      &:nth-child(#{$i}) {
-        z-index: 10 - $i;
-      }
-    }
-  }
+	@include tablet {
+		@for $i from 1 through 8 {
+			&:nth-child(#{$i}) {
+				z-index: 10 - $i;
+			}
+		}
+	}
 
-  &:nth-child(1) {
-    margin-top: 28px;
-    margin-left: 10px;
-    transform: rotate(-4deg);
-  }
+	&:nth-child(1) {
+		margin-top: 28px;
+		margin-left: 10px;
+		transform: rotate(-4deg);
+	}
 
-  &:nth-child(2) {
-    margin-top: 20px;
-    margin-left: 20px;
-    transform: rotate(-2deg);
-  }
+	&:nth-child(2) {
+		margin-top: 20px;
+		margin-left: 20px;
+		transform: rotate(-2deg);
+	}
 
-  &:nth-child(3) {
-    transform: rotate(5deg);
-  }
+	&:nth-child(3) {
+		transform: rotate(5deg);
+	}
 
-  &:nth-child(6) {
-    transform: rotate(-2deg);
-  }
+	&:nth-child(6) {
+		transform: rotate(-2deg);
+	}
 
-  &:nth-child(7) {
-    transform: rotate(3deg);
-  }
+	&:nth-child(7) {
+		transform: rotate(3deg);
+	}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-sizing: border-box;
-    border-bottom: 130px solid #fff;
-  }
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		box-sizing: border-box;
+		border-bottom: 130px solid #fff;
+		transition: transform 0.5s cubic-bezier(0.25, 0.1, 0, 1.04);
 
-  .ImageDescription {
-    font-family: "Long Cang", cursive;
-    position: absolute;
-    bottom: 6%;
-    font-size: 44px;
-    width: 100%;
-    text-align: right;
-    padding: 0 8%;
-    box-sizing: border-box;
+		&:hover {
+			transform: scale(1.03);
+		}
+	}
 
-    @include phone {
-      bottom: 12%;
-      font-size: 25px;
-    }
-  }
+	.ImageDescription {
+		font-family: "Long Cang", cursive;
+		position: absolute;
+		bottom: 6%;
+		font-size: 44px;
+		width: 100%;
+		text-align: right;
+		padding: 0 8%;
+		box-sizing: border-box;
+
+		@include phone {
+			bottom: 12%;
+			font-size: 25px;
+		}
+	}
 }
