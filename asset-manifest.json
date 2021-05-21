@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/nikantic.github.io/static/css/main.b274c140.chunk.css",
-    "main.js": "/nikantic.github.io/static/js/main.58918cbd.chunk.js",
-    "main.js.map": "/nikantic.github.io/static/js/main.58918cbd.chunk.js.map",
+    "main.js": "/nikantic.github.io/static/js/main.9651d9f0.chunk.js",
+    "main.js.map": "/nikantic.github.io/static/js/main.9651d9f0.chunk.js.map",
     "runtime-main.js": "/nikantic.github.io/static/js/runtime-main.698b52b2.js",
     "runtime-main.js.map": "/nikantic.github.io/static/js/runtime-main.698b52b2.js.map",
-    "static/js/2.2374913b.chunk.js": "/nikantic.github.io/static/js/2.2374913b.chunk.js",
-    "static/js/2.2374913b.chunk.js.map": "/nikantic.github.io/static/js/2.2374913b.chunk.js.map",
+    "static/js/2.0c7b5857.chunk.js": "/nikantic.github.io/static/js/2.0c7b5857.chunk.js",
+    "static/js/2.0c7b5857.chunk.js.map": "/nikantic.github.io/static/js/2.0c7b5857.chunk.js.map",
     "index.html": "/nikantic.github.io/index.html",
-    "precache-manifest.550a5b3fe71153250c5455f16e31bea6.js": "/nikantic.github.io/precache-manifest.550a5b3fe71153250c5455f16e31bea6.js",
+    "precache-manifest.1c40d5b464ef46973d6f137612166611.js": "/nikantic.github.io/precache-manifest.1c40d5b464ef46973d6f137612166611.js",
     "service-worker.js": "/nikantic.github.io/service-worker.js",
     "static/css/main.b274c140.chunk.css.map": "/nikantic.github.io/static/css/main.b274c140.chunk.css.map",
-    "static/js/2.2374913b.chunk.js.LICENSE.txt": "/nikantic.github.io/static/js/2.2374913b.chunk.js.LICENSE.txt"
+    "static/js/2.0c7b5857.chunk.js.LICENSE.txt": "/nikantic.github.io/static/js/2.0c7b5857.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.698b52b2.js",
-    "static/js/2.2374913b.chunk.js",
+    "static/js/2.0c7b5857.chunk.js",
     "static/css/main.b274c140.chunk.css",
-    "static/js/main.58918cbd.chunk.js"
+    "static/js/main.9651d9f0.chunk.js"
   ]
 }
