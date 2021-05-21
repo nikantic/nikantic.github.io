@@ -2,6 +2,7 @@ import React from "react";
 import "./ProfileCard.scss";
 import SocialIcon from "../SocialIcon/SocialIcon";
 import Button from "../Button/Button";
+import portfolio from "../../portfolio.json";
 
 const ProfileCard = () => {
   return (
@@ -51,9 +52,7 @@ const ProfileCard = () => {
           <p className="ProfileInfoLocation">Belgrade, Serbia</p>
         </div>
         <div className="ProfileInfoDescription">
-          <p>
-            I'm a diligent Frontend Engineer specialising in React and JavaScript. 2.5+ years of experience in the industry. Open source contributor.
-          </p>
+          <p>{portfolio.about}</p>
         </div>
       </div>
       <div className="ButtonsHolder">
