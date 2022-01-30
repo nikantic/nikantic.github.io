@@ -24,9 +24,9 @@ const ProfileCard = () => {
           />
           <SocialIcon
             isLink
-            icon="Instagram"
+            icon="Linkedin"
             size="18"
-            socialLink="https://www.instagram.com/theseriousnick/"
+            socialLink="https://www.linkedin.com/in/nikantic"
           />
           <SocialIcon
             isLink
@@ -39,12 +39,6 @@ const ProfileCard = () => {
             icon="Codesandbox"
             size="18"
             socialLink="https://codesandbox.io/u/nikantic"
-          />
-          <SocialIcon
-            isLink
-            icon="Linkedin"
-            size="18"
-            socialLink="https://www.linkedin.com/in/nikantic"
           />
         </div>
         <div className="ProfileInfoTopHolder">
