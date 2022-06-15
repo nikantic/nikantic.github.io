@@ -30,64 +30,11 @@ class App extends Component {
     this.AppRef = React.createRef();
   }
 
-  componentDidMount() {
-    if (window.innerWidth > 1024) {
-      data.timeline = timelineController(
-        this.AppRef.current.querySelector(".Section1"),
-        this.AppRef.current.querySelector(".Section2"),
-        this.AppRef.current.querySelectorAll(".TextLink"),
-        this.AppRef.current.querySelectorAll(".ImageLink"),
-        this.AppRef.current.querySelector(".HeaderTitle1"),
-        this.AppRef.current.querySelector(".HeaderTitle2")
-      );
-      window.addEventListener("scroll", () => {
-        data.timelineProgress =
-          window.scrollY * (1 / (data.fakeScrollHeight - window.innerHeight));
-      });
-
-      this.AppRef.current.querySelector(".FakeScroll").style.height =
-        data.fakeScrollHeight + "px";
-
-      gsap.ticker.add(updateProgress);
-    }
-  }
   render() {
     return (
       <div className="App" ref={this.AppRef}>
         <div className="FakeScroll"></div>
         {window.innerWidth > 600 ? <Header /> : null}
-        <div className="Section Section1">
-          <div className="Side LeftSide">
-            {projectsData.projects.map((project, index) => {
-              return (
-                <Link key={'TextLink_' + index} customClass="TextLink" linkTo={project.url}>
-                  {project.name}
-                </Link>
-              );
-            })}
-          </div>
-          <div className="Side RightSide">
-            <div className="ImagesHolder">
-              {projectsData.projects.map((project, index) => {
-                return (
-                  <Link
-                    key={'ImageLink_' + index}
-                    customClass="ImageLink"
-                    linkTo={project.url}
-                  >
-                    <img
-                      alt={project.name}
-                      src={process.env.PUBLIC_URL + project.image}
-                    />
-                    <div className="ImageDescription">
-                      <p>{project.date}</p>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </div>
         <div className="Section Section2">
           <div className="Section2Inner">
             <ProfileCard />

@@ -1,61 +1,5 @@
 {
-	"projects": [
-		{
-			"name": "Amedeo",
-			"date": "December 2018",
-			"image": "/assets/img/amedeo.jpg",
-			"url": "https://qodeinteractive.com/wordpress-theme/amedeo-multi-concept-artist-and-creative-agency-theme/"
-		},
-		{
-			"name": "Brünn",
-			"date": "December 2018",
-			"image": "/assets/img/brunn.jpg",
-			"url": "https://qodeinteractive.com/wordpress-theme/brunn-creative-agency-theme/"
-		},
-		{
-			"name": "Kenozoik",
-			"date": "Jul 2018",
-			"image": "/assets/img/kenozoik.jpg",
-			"url": "https://qodeinteractive.com/wordpress-theme/kenozoik-vibrant-portfolio-theme/"
-		},
-		{
-			"name": "La Comète",
-			"date": "Jul 2019",
-			"image": "/assets/img/lacomete.jpg",
-			"url": "https://qodeinteractive.com/wordpress-theme/la-comete-fashion-and-clothing-store-theme/"
-		},
-		{
-			"name": "Aarhus",
-			"date": "December 2018",
-			"image": "/assets/img/aarhus.jpg",
-			"url": "https://qodeinteractive.com/wordpress-theme/aarhus-modern-architecture-theme/"
-		},
-		{
-			"name": "UltraViolette",
-			"date": "Jun 2019",
-			"image": "/assets/img/ultraviolette.jpg",
-			"url": "https://qodeinteractive.com/wordpress-theme/ultraviolette-design-portfolio-theme/"
-		},
-		{
-			"name": "Elson",
-			"date": "February 2020",
-			"image": "/assets/img/elson.jpg",
-			"url": "https://qodeinteractive.com/wordpress-theme/elson-modern-shop-theme/"
-		},
-		{
-			"name": "Pelicula",
-			"date": "May 2020",
-			"image": "/assets/img/pelicula.jpg",
-			"url": "https://qodeinteractive.com/wordpress-theme/pelicula-video-production-and-movie-theme/"
-		}
-	],
 	"openSourceProjects": [
-		{
-			"name": "nikantic.github.io",
-			"description": "My portfolio website.",
-			"tech": ["react", "gsap", "sass"],
-			"url": "https://github.com/nikantic/nikantic.github.io"
-		},
 		{
 			"name": "react-currency-app",
 			"description": "Currency Exchange App with real time conversions and store management in Redux.",
@@ -67,6 +11,12 @@
 			"description": "A concurrent React Stopwatch App.",
 			"tech": ["react", "es6"],
 			"url": "https://github.com/nikantic/my-react-stopwatch"
+		},
+		{
+			"name": "nikantic.github.io",
+			"description": "My portfolio website.",
+			"tech": ["react", "gsap", "sass"],
+			"url": "https://github.com/nikantic/nikantic.github.io"
 		}
 	],
 	"skills": [
@@ -97,5 +47,5 @@
 		"Agile",
 		"Scrum"
 	],
-	"about": "Frontend Engineer specialising in React and JavaScript. 3.5 years of experience. Bachelor's Degree in IT. Open source contributor. Strong understanding of UI/UX."
+	"about": "4 years of experience. Bachelor's Degree in IT. Open source contributor. Strong understanding of UI/UX."
 }
